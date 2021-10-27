@@ -1,3 +1,3 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install build-essential -y
+# RUN apt-get update && apt-get install build-essential -y
