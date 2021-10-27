@@ -1,4 +1,5 @@
-name: Docker
+name: Aurora Base Image
+
 # Aries
 on:
   schedule:
@@ -57,7 +58,7 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           # tags: ${{ steps.meta.outputs.tags }}
-          tags: ghcr.io/umgc-capstone-project/aurora:latest
+          tags: ghcr.io/${{ github.repository }}:latest
           labels: ${{ steps.meta.outputs.labels }}
 
       # - name: Update repo description
