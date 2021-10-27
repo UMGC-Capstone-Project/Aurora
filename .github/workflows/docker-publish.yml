@@ -56,7 +56,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          # tags: ${{ steps.meta.outputs.tags }}
+          tags: ghcr.io/umgc-capstone-project/aurora:latest
           labels: ${{ steps.meta.outputs.labels }}
 
       # - name: Update repo description
@@ -70,5 +71,5 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
       - name: Image tags
         run: echo ${{ steps.meta.outputs.tags }}
-      - name: Image labels
-        run: echo ${{ steps.meta.outputs.labels }}
+      # - name: Image labels
+        # run: echo ${{ steps.meta.outputs.labels }}
