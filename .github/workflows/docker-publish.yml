@@ -17,7 +17,6 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
   build:
 
@@ -72,5 +71,7 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
       - name: Image tags
         run: echo ${{ steps.meta.outputs.tags }}
+      - name: metadata
+        run: echo ${{ steps.meta.outputs }}
       # - name: Image labels
         # run: echo ${{ steps.meta.outputs.labels }}
