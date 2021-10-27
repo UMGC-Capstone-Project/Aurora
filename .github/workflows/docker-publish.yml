@@ -57,7 +57,7 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           # tags: ${{ steps.meta.outputs.tags }}
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/umgc-capstone-project/aurora:latest
           labels: ${{ steps.meta.outputs.labels }}
 
       # - name: Update repo description
